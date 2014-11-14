@@ -69,7 +69,7 @@ class SheetElement(WorkbookMixinElement):
         Get relationships from current sheet
         """
         elems = RelationshipsElement(self._getRelationships())
-        return map(RelationshipElement, elems)
+        return map(RelationshipElement, elems.iterChildNodesByTagName(const.TAG_RELATIONSHIP))
 
     def _getRelationships(self):
         return self.getFirstChildNodeByTagName(const.TAG_RELATIONSHIPS)
