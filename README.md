@@ -4,13 +4,7 @@
 
 ##Install XMind SDK for python
 
-Clone the repository to a local working directory
-
-	git clone https://github.com/xmindltd/xmind-sdk-python.git
-	
-Now there will be a directory named `xmind-sdk-python` under the current directory. Change to the directory `xmind-sdk-python` and install **XMind SDK for python**.
-
-	python setup.py install
+	pip install git+https://github.com/xmindltd/xmind-sdk-python.git
 	
 *It is highly recommended to install __XMind SDK for python__ under an isolated python environment using [virtualenv](https://pypi.python.org/pypi/virtualenv)*
 
