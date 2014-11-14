@@ -30,7 +30,7 @@ def dump_sheet(sheet):
 
     for rel in sheet.getRelationships():
         id1, id2 = rel.getEnd1ID(), rel.getEnd2ID()
-        print 'Relation:', M.get(id1), '-->', M.get(id2)
+        print 'Relation: [%s] --> [%s]' % (M.get(id1), M.get(id2))
 
 def main():
     x = xmind.load('test2.xmind')
