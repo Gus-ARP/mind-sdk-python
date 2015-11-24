@@ -3,7 +3,7 @@
 """
     xmind.import_export_filters.ExportFilter
     ~~~~~~~~~~~
-    :mod:``xmind.import_export_filters.ExportFilter`` provide a handy way for exporting / importing 
+    :mod:``xmind.import_export.ExportFilter`` provide a handy way for exporting / importing 
     XMind files to other formats (e.g: GraphViz).
     :copyright: Michel Kern
     :license: MIT

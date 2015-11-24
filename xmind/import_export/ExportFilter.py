@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 """
-    xmind.import_export_filters.ExportFilter
+    xmind.import_export.ExportFilter
     ~~~~~~~~~~~
     :mod:``xmind.import_export_filters.ExportFilter`` provide a handy way for exporting / importing 
     XMind files to other formats (e.g: GraphViz).
@@ -16,6 +16,7 @@ import os.path
 
 FILE_NOT_FOUND_ERROR = 1
         
+#------------------- ExportFilter -------------------
 class ExportFilter():
     def __init__(self):
         self.name = "export_filter"
@@ -27,7 +28,7 @@ class ExportFilter():
             print("source_path: '" + source_path + "' not found")
             exit(FILE_NOT_FOUND_ERROR)
     #---------- export()
-
+#------------------- ExportFilter
 
 #======================== main ========================
 def main():
