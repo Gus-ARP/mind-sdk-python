@@ -25,7 +25,6 @@ class GraphvizExportFilter(ExportFilter):
     #---------- export() ----------    
     def export(self, source_path, target_path):
         print(self.name + ".export ")
-        print("export_filter.name: '" + self.name + "'")
         if (not os.path.isfile(source_path)): 
             print("source_path: '" + source_path + "' not found")
             exit(FILE_NOT_FOUND_ERROR)
