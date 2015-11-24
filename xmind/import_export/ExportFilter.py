@@ -14,7 +14,8 @@ __author__ = "echopraxium@yahoo.com <Michel Kern>"
 import os
 import os.path
 
-FILE_NOT_FOUND_ERROR = 1
+FILE_NOT_FOUND_ERROR         = 1
+EMPTY_OUTPUT_FILE_PATH_ERROR = 2
         
 #------------------- ExportFilter -------------------
 class ExportFilter():
