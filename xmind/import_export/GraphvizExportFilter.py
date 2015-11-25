@@ -56,8 +56,12 @@ class GraphvizExportFilter(ExportFilter):
     def generateGraphvizDotString(self, root_topic):
         self.output_str = u"digraph G {\n"
         
-        self.output_str = self.output_str + u"ranksep=2.8;\n"
-        self.output_str = self.output_str + u"ratio=auto;\n"
+        #self.output_str = self.output_str + u'    overlap=scalexy;';
+        #self.output_str = self.output_str + u'    ranksep=3;\n'
+        #self.output_str = self.output_str + u'    ratio=auto;\n'
+
+        self.output_str = self.output_str + u'root=topic_1;'
+        self.output_str = self.output_str + u'overlap=false;';
 
         self.traverse(root_topic)    
         self.output_str = self.output_str + u"}"
@@ -80,7 +84,7 @@ class GraphvizExportFilter(ExportFilter):
             print("> *ERROR* output_path is empty")
             exit(EMPTY_OUTPUT_FILE_PATH_ERROR)
             
-        graphviz_tool = 'dot'
+        #graphviz_tool = 'dot'
         graphviz_tool = 'twopi'
         graphviz_dot_path = 'C:\\Program Files (x86)\\Graphviz\\bin\\' + graphviz_tool + '.exe'
         if (not os.path.isfile(graphviz_dot_path)): 
@@ -109,7 +113,39 @@ class GraphvizExportFilter(ExportFilter):
         topic_title = unicode(topic.getTitle())
         
         msg = indent + '> ' + str(level) + ': ' + topic_title
-        self.output_str = self.output_str + u'    ' + topic_id + u' [label=\"' + topic_title + u'\"];\n'
+        
+        font_size = 30 - level*2.5
+        shape_attribute = ' shape=box, '
+        
+        # http://rich-iannone.github.io/DiagrammeR/graphviz.html
+        color_attribute = ' style=filled, color=Beige, '
+        
+        if (level == 0):
+            font_size = 35
+            shape_attribute = ' shape=box, margin=\"0.2,0.1\", '
+        elif (level == 1):
+            font_size = 30
+            shape_attribute = ' shape=box, margin=\"0.2,0.07\", '
+        else:
+            font_size = 30 - level*2.5
+            shape_attribute = ' shape=plaintext, '
+            color_attribute = ' style=filled, color=LightCyan, '
+            
+        font_attribute = u'fontname = \"Helvetica\", fontsize = ' + str(font_size) + ', '
+        
+        if (len(topic_title) > 15):
+            words = topic_title.split(' ')
+            word_count = len(words)
+            multiline_topic_title= ''
+            word_index = 0
+            for word in words:
+                multiline_topic_title = multiline_topic_title + word[word_index]
+            
+        label_attribute = ' label=\"' + topic_title + '\", '
+        
+        self.output_str = self.output_str + u'    ' + topic_id + u' [' 
+        self.output_str = self.output_str + font_attribute + label_attribute + shape_attribute + color_attribute
+        self.output_str = self.output_str + u' ];\n'
         
         topics = topic.getSubTopics()
 
