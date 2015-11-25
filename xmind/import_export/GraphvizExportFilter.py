@@ -48,7 +48,7 @@ class GraphvizExportFilter(ExportFilter):
         
         self.generateGraphvizDotString(root_topic)
         self.writeGraphvizDotToFile(target_path)
-        self.generateImageFile(target_path, 'out.pdf')
+        self.generateImageFile(target_path, '../data/out.pdf')
         
         print(">> export done")
         
@@ -133,13 +133,13 @@ class GraphvizExportFilter(ExportFilter):
             
         font_attribute = u'fontname = \"Helvetica\", fontsize = ' + str(font_size) + ', '
         
-        if (len(topic_title) > 15):
-            words = topic_title.split(' ')
-            word_count = len(words)
-            multiline_topic_title= ''
-            word_index = 0
-            for word in words:
-                multiline_topic_title = multiline_topic_title + word[word_index]
+        #if (len(topic_title) > 15):
+        #    words = topic_title.split(' ')
+        #    word_count = len(words)
+        #    multiline_topic_title= ''
+        #    word_index = 0
+        #    for word in words:
+        #        multiline_topic_title = multiline_topic_title + word[word_index]
             
         label_attribute = ' label=\"' + topic_title + '\", '
         
@@ -164,7 +164,7 @@ class GraphvizExportFilter(ExportFilter):
 def main():
     print("** xmind.GraphvizExportFilter **")
     export_filter = GraphvizExportFilter()
-    export_filter.export("../test/test.xmind", "map.dot")
+    export_filter.export("../data/Hindouisme.xmind", "../data/map.dot")
     print(export_filter.getOutput())
     #pass
 
