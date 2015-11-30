@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 #-*- coding: utf-8 -*-
 """
-    xmind.import_export
-    -------------------
+    xmind.import_export module
+    --------------------------
     :copyright: Michel Kern
     :license:   MIT
 
