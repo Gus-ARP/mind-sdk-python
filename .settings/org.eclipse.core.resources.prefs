@@ -10,4 +10,5 @@ encoding//xmind/import_export/ExportFilter.py=utf-8
 encoding//xmind/import_export/GraphvizExportFilter.py=utf-8
 encoding//xmind/import_export/__init__.py=utf-8
 encoding//xmind/utils.py=utf-8
+encoding/example.py=utf-8
 encoding/setup.py=utf-8

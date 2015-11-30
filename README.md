@@ -1,4 +1,4 @@
-#XMind SDK for python
+#Fork of XMind SDK for python with extensions for import / import
 
 **XMind SDK for python** to help Python developers to easily work with XMind files and build XMind extensions.
 
@@ -6,7 +6,7 @@
 
 Clone the repository to a local working directory
 
-	git clone https://github.com/xmindltd/xmind-sdk-python.git
+	git clone https://github.com/Almerxsese/xmind-sdk-python
 	
 Now there will be a directory named `xmind-sdk-python` under the current directory. Change to the directory `xmind-sdk-python` and install **XMind SDK for python**.
 
