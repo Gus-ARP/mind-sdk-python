@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 """
     xmind.framework.Enum
-    --------------------
+    ~~~~~~~~~~~~~~~~~
     :mod:``xmind.framework.Enum`` provides an support for an enumerated type 
     :copyright: http://code.activestate.com/recipes/413486-first-class-enums-in-python/
     :copyright: Zoran Isailovski 

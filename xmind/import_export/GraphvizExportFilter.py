@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 """
     xmind.import_export.GraphvizExportFilter
-    ----------------------------------------
+    ~~~~~~~~~~~~~~~~~
     :mod:``xmind.import_export.ExportFilter`` provide a handy way for exporting 
     XMind files to dot format (see http://www.graphviz.org/pdf/dotguide.pdf)
     GraphViz (http://www.graphviz.org/) 
