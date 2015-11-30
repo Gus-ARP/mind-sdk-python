@@ -1,4 +1,4 @@
-#Fork of XMind SDK for python with extensions for import / import
+#Fork of XMind SDK for python with extensions for import / export (e.g. Graphviz)
 
 **XMind SDK for python** to help Python developers to easily work with XMind files and build XMind extensions.
 
@@ -13,6 +13,12 @@ Now there will be a directory named `xmind-sdk-python` under the current directo
 	python setup.py install
 	
 *It is highly recommended to install __XMind SDK for python__ under an isolated python environment using [virtualenv](https://pypi.python.org/pypi/virtualenv)*
+
+##Set PYTHONPATH
+You must set PYTHONPATH environment variable to '.'. 
+
+In Eclipse (with PyDev plugin): modify the 'Run Configuration' and define varaiable PYTHONPATH = . (with the 
+'Environment' Tab)
 
 ##Usage
 

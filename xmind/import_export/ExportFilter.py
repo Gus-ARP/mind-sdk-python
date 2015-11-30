@@ -38,7 +38,7 @@ class ExportFilter():
 def main():
     print("** xmind.ExportFilter **")
     export_filter = ExportFilter()
-    rc = export_filter.export("../data/t.txt", "")
+    rc = export_filter.export("../data/sample_text_file.txt", "")
     print(rc)
     #pass
 
