@@ -12,7 +12,7 @@ setup(
 
     author="Michel Kern",
     author_email="echopraxium@yahoo.com",
-    description="A fork of XMind python SDK",
+    description="A fork of XMind python SDK with extensions for import / export",
     license="MIT",
     keywords="XMind, SDK, mind mapping",
     url="https://github.com/Almerxsese/xmind-sdk-python"
