@@ -13,11 +13,11 @@ __author__ = "echopraxium@yahoo.com <Michel Kern>"
 
 import os
 import os.path
-from xmind.framework import Enum
+from xmind.framework.Enum import Enum
 
 FILE_NOT_FOUND_ERROR         = 1
 EMPTY_OUTPUT_FILE_PATH_ERROR = 2
-#SDK_ERRORS = Enum('FILE_NOT_FOUND_ERROR', 'EMPTY_OUTPUT_FILE_PATH_ERROR')
+RETURN_CODE = Enum('OK', 'FILE_NOT_FOUND_ERROR', 'EMPTY_OUTPUT_FILE_PATH_ERROR')
         
 #------------------- ExportFilter -------------------
 class ExportFilter():
@@ -29,7 +29,8 @@ class ExportFilter():
         print(self.name + ".export ")
         if (not os.path.isfile(source_path)): 
             print("source_path: '" + source_path + "' not found")
-            exit(SDK_ERRORS.FILE_NOT_FOUND_ERROR)
+            exit(RETURN_CODE.FILE_NOT_FOUND_ERROR)
+        return RETURN_CODE.OK
     #---------- export()
 #------------------- ExportFilter
 
@@ -37,7 +38,8 @@ class ExportFilter():
 def main():
     print("** xmind.ExportFilter **")
     export_filter = ExportFilter()
-    export_filter.export("", "")
+    rc = export_filter.export("../data/t.txt", "")
+    print(rc)
     #pass
 
 if __name__ == '__main__':
