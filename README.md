@@ -1,4 +1,4 @@
-#XMind SDK for python
+#Fork of XMind SDK for python with extensions for import / export (e.g. Graphviz)
 
 **XMind SDK for python** to help Python developers to easily work with XMind files and build XMind extensions.
 
@@ -6,13 +6,19 @@
 
 Clone the repository to a local working directory
 
-	git clone https://github.com/xmindltd/xmind-sdk-python.git
+	git clone https://github.com/Almerxsese/xmind-sdk-python
 	
 Now there will be a directory named `xmind-sdk-python` under the current directory. Change to the directory `xmind-sdk-python` and install **XMind SDK for python**.
 
 	python setup.py install
 	
 *It is highly recommended to install __XMind SDK for python__ under an isolated python environment using [virtualenv](https://pypi.python.org/pypi/virtualenv)*
+
+##Set PYTHONPATH
+You must set PYTHONPATH environment variable to '.'. 
+
+In Eclipse (with PyDev plugin): modify the 'Run Configuration' and define varaiable PYTHONPATH = . (with the 
+'Environment' Tab)
 
 ##Usage
 
