@@ -6,6 +6,7 @@ encoding//xmind/core/loader.py=utf-8
 encoding//xmind/core/notes.py=utf-8
 encoding//xmind/core/workbook.py=utf-8
 encoding//xmind/framework/Enum.py=utf-8
+encoding//xmind/framework/UnitTest.py=utf-8
 encoding//xmind/framework/__init__.py=utf-8
 encoding//xmind/import_export/ExportFilter.py=utf-8
 encoding//xmind/import_export/GraphvizExportFilter.py=utf-8

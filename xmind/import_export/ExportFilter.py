@@ -3,8 +3,8 @@
 """
     xmind.import_export.ExportFilter
     --------------------------------
-    :mod:``xmind.import_export.ExportFilter`` provide a handy way for exporting / importing 
-    XMind files to other formats (e.g: GraphViz).
+    :mod:       ``xmind.import_export.ExportFilter`` provide a handy way for exporting / importing 
+                XMind files to other formats (e.g: GraphViz).
     :copyright: Michel Kern
     :license:   MIT
 """
@@ -44,4 +44,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
