@@ -18,6 +18,7 @@ from .mixin import WorkbookMixinElement
 from .title import TitleElement
 from .position import PositionElement
 from .notes import NotesElement, PlainNotes
+from xmind.core.label import LabelsElement, Labels
 from .markerref import MarkerRefElement
 from .markerref import MarkerRefsElement
 from .markerref import MarkerId
@@ -331,6 +332,17 @@ class TopicElement(WorkbookMixinElement):
         if notes is not None:
             return NotesElement(notes, self)
 
+    def getLabels(self):
+        """
+        Return `NotesElement` object` and invoke
+        `NotesElement.getContent()` to get labels content.
+        """
+
+        labels = self.getFirstChildNodeByTagName(const.TAG_LABELS)
+
+        if labels is not None:
+            return NotesElement(labels, self)
+
     def _set_notes(self):
         notes = self.getNotes()
 
@@ -339,6 +351,15 @@ class TopicElement(WorkbookMixinElement):
             self.appendChild(notes)
 
         return notes
+
+    def _set_labels(self):
+        labels = self.getLabels()
+
+        if labels is None:
+            labels = LabelsElement(ownerTopic=self)
+            self.appendChild(labels)
+
+        return labels
 
     def setPlainNotes(self, content):
         """ Set plain text notes to topic
@@ -354,6 +375,20 @@ class TopicElement(WorkbookMixinElement):
             notes.getImplementation().removeChild(old)
 
         notes.appendChild(new)
+
+    def setLabels(self, content):
+        """
+        Set plain text label to topic
+        :param content: 
+        """
+        labels = self._set_labels()
+        new = Labels(content, None, self)
+
+        old = labels.getFirstChildNodeByTagName(new.getFormat())
+        if old is not None:
+            labels.getImplementation().removeChild(old)
+
+        labels.appendChild(new)
 
 
 class ChildrenElement(WorkbookMixinElement):
