@@ -62,6 +62,12 @@ class TopicElement(WorkbookMixinElement):
     def _set_hyperlink(self, hyperlink):
         self.setAttribute(const.ATTR_HREF, hyperlink)
         #self.updateModifiedTime()
+       
+    def _set_orientation(self,orientation):
+        self.setAttribute(const.ATTR_ORIENTATION,orientation)  
+
+    def setTopicOrientation(self,orientation):
+        self._set_orientation(orientation)
 
     def getOwnerSheet(self):
         parent = self.getParentNode()
