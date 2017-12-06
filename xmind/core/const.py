@@ -55,7 +55,7 @@ ATTR_TYPE = "type"
 ATTR_END1 = "end1"
 ATTR_END2 = "end2"
 ATTR_MARKERID = "marker-id"
-ATTR_ORIENTATION ="structure-class"
+ATTR_STRUCTURE ="structure-class"
 
 NS_URI = "http://www.w3.org/1999/xhtml"
 
