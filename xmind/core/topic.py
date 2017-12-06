@@ -67,7 +67,7 @@ class TopicElement(WorkbookMixinElement):
         self.setAttribute(const.ATTR_STRUCTURE,structure)  
 
     def setTopicStructure(self,structure):
-        self._set_orientation(structure)
+        self._set_structure(structure)
 
     def getOwnerSheet(self):
         parent = self.getParentNode()
