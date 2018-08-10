@@ -30,7 +30,7 @@ or:
 
 	xmind.save(workbook, /save/file/to/path)
 
-## LICENSE
+## LICENSE  
 
 The MIT License (MIT)
 
