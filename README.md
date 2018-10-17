@@ -1,8 +1,8 @@
-#XMind SDK for python
+# XMind SDK for python
 
 **XMind SDK for python** to help Python developers to easily work with XMind files and build XMind extensions.
 
-##Install XMind SDK for python
+## Install XMind SDK for python
 
 Clone the repository to a local working directory
 
@@ -14,7 +14,7 @@ Now there will be a directory named `xmind-sdk-python` under the current directo
 	
 *It is highly recommended to install __XMind SDK for python__ under an isolated python environment using [virtualenv](https://pypi.python.org/pypi/virtualenv)*
 
-##Usage
+## Usage
 
 Open an existing XMind file or create a new XMind file and place it into a given path
 
@@ -30,7 +30,7 @@ or:
 	
 	xmind.save(workbook, /save/file/to/path)
 	
-##LICENSE
+## LICENSE
 
 The MIT License (MIT)
 
