@@ -8,12 +8,11 @@ with open("README.md", "r") as fh:
 
 setup(
     name="xmind-sdk",
-    version="0.1a.0",
+    version="0.1a0",
     author="Woody Ai",
     author_email="aiqi@xmind.net",
     description="The offical XMind python SDK",
     long_description=long_description,
-    long_description_content_type="text/markdown",
     
     packages=find_packages(),
 
