@@ -28,5 +28,5 @@ setup(
     python_requires='>=3.6',
 
     url="https://github.com/andrii-z4i/xmind-sdk-python.git",
-    download_url='ihttps://github.com/andrii-z4i/xmind-sdk-python/archive/v1.0.tar.gz',
+    download_url='https://github.com/andrii-z4i/xmind-sdk-python/archive/v1.0.tar.gz',
 )
